@@ -1,0 +1,78 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "Energy from renewable sources",
+      "subtitle": "Share of Energy from renewable source in different countries(%)source:Eurostat",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+   
+    
+    "description": "CPI contribution",
+    
+    "data": {
+      "url": " https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/share%20of%20energy%20data.json",
+      "format": {"type": "json"}
+    },
+    
+    "height": 300,
+    "width": 300,
+    
+    "mark": {"type": "line", "width": 3},
+    
+    "transform": [{"filter": {"selection": "pickSeries"}},{"calculate": "datum.Share/100","as": "percent"}
+  ],
+    
+    "selection": {
+      "pickSeries": {
+        "type": "single",
+        "fields": ["Geo"],
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Austria",
+            "Belgium",
+            "Denmark",
+            "EU",
+            "France",
+            "Greece",
+            "Spain",
+            "Iceland",
+            "Italy",
+            "Sweden",
+            "UK",
+            "Germany"
+          ],
+          "name": "Pick a series: "
+        }
+      }
+    },
+  
+  
+    "encoding": {
+   
+      "x": {"field": "Year", "type": "nominal", "title": ""},
+   
+      "y": {"field": "percent", "type": "quantitative","axis":{"format":"%"}, "title": ""},
+  
+   
+      "color": {
+        "field": "Geo",
+        "type": "nominal",
+        "legend": {"orient": "bottom", "columns":2},
+        "XYZscale": {"range": ["rgb(0, 0, 255)", "rgb(40, 40, 255)", "rgb(80, 80, 255)", "rgb(120, 120, 255)", "rgb(160, 160, 255)", "rgb(200, 200, 255)"]},
+        "scale": {"range": ["rgb(0, 0, 255)", "rgb(20, 20, 255)", "rgb(40, 40, 255)", "rgb(60, 60, 255)", "rgb(80, 80, 255)", "rgb(100, 100, 255)", "rgb(120, 120, 255)", "rgb(140, 140, 255)", "rgb(160, 160, 255)", "rgb(180, 180, 255)", "rgb(200, 200, 255)", "rgb(200, 200, 255)"]},
+        "title": ""
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  
