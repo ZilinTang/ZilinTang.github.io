@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width":300,
+    "height": 250,
+    "title": {
+      "text": "Asian - base map",
+      "subtitle":" try to hover over the area",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "subtitlePadding":5,
+      "anchor": "middle",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/Asian.geo.json",
+  
+      "format": {"property": "features"}
+    },
+    "projection": {"type": "mercator"},
+  
+    "mark": {
+        "type": "geoshape",
+        "fill": "lightgrey",
+        "stroke": "darkgray",
+        "strokeWidth":1},
+    "encoding": {
+      "tooltip":[
+        {"field":"properties.name", "type": "nominal", "title":"Country"}]}
+  }
