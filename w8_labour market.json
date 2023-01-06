@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+    "title": { 
+    "text": "Unemployment level and number of vacancies in the UK",
+    "subtitle": "thousands, Source: ONS",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+  
+    "width":300,
+    "height":300,
+  
+    
+    "encoding": {
+      "x": {"field": "Date", "type": "temporal", "title":null},
+      
+      "color": {
+        "field": "name", 
+        "type": "ordinal", 
+        "title":null,
+        "scale":{"range": ["#00BFFF", "#0276FD"]},
+        "legend":{"orient": "bottom"}}
+        },
+  
+  
+    "layer":[
+      
+      {"data": {"url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/w8_Festival3.csv"},
+  
+  "transform": [
+    {"calculate": "datum.Vacancy","as": "name"}
+  ],
+  
+  
+      "mark":{"type": "line"},
+  
+      "encoding": {"y": {"field": "All vacancies", "type": "quantitative","title":"All vacancies"}}
+        
+  
+    },
+  
+    {"data": {"url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/w8_Festival3.csv"},
+  
+  "transform": [
+    {"calculate": "datum.Unemployed","as": "name"}
+  ],
+  
+      
+      "mark":{"type": "line"},
+      "encoding": {"y": {"field": "Unemployed level", "type": "quantitative","title":"Unemployed level"}}
+    }
+    
+    ]
+   
+  }
