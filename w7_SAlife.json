@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 250,
+    "title": {
+      "text": "Life expectancy in South America(2020)",
+      "subtitle": " Try to hover over the area (data source:The World Bank)",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 12,
+      "anchor": "middle",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/SA.geo.json",
+      "format": {"property": "features"}
+    },
+  
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "key": "Country Name",
+          "fields": ["Life expectancy"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/w7_SAlife.csv"
+          }
+        }
+      }
+    ],
+    "projection": {"type": "mercator"},
+    "mark": {
+      "type": "geoshape",
+      "fXYZill": "lightgrey",
+      "stroke": "darkgray",
+      "strokeWidth": 0.6
+    },
+  
+    "encoding": {
+      "color":{
+        "field":"Life expectancy",
+        "type": "quantitative"
+      },
+  
+      "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "Country"},
+        {"field": "Life expectancy", "type": "quantitative", "title": "Life expectance"}
+      ]
+    }
+  }
