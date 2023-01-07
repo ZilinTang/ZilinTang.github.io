@@ -1,0 +1,49 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Various US measures state by state",
+
+  "title": {
+    "text": "Renewable energy consumption and GDP per capita",
+    "subtitle":[" Renewable energy consumption (% of total final energy consumption)","Data source: The World Bank"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/w9_data2.csv"},
+    
+
+  "mark": {
+    "type":"circle",
+    "size":150,
+    "color":"rgb(0,67,167)",
+    "opacity":0.6},
+  
+  "height": 300,
+  "width": 300,
+
+  "encoding": {
+
+    "x": {
+      "field": "GDP per capita (current US$)", 
+      "type": "quantitative",
+      "scale": {"domain": [500, 100000],"type": "symlog"},
+      "title":"GDP per capita (current US$)"
+      },
+
+    "y": {
+      "field": "Renewable energy consumption", 
+      "type": "quantitative",
+      "title":"Renewable energy consumption (% of total final energy consumption)"
+  
+      },
+  
+   "tooltip":[
+        {"field":"Country Name", "type": "ordinal", "title":"Country"},
+        {"field":"Renewable energy consumption", "type": "quantitative", "title":"Renewable energy consumption", "format":".0f"},
+        {"field":"GDP per capita (current US$)", "type": "quantitative", "title":"GDP per capita", "format":".2f"}
+        ]
+        }
+}
