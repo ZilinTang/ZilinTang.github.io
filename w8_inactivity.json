@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/w8_data2.csv",
+      "format":{"property": "years"}},
+
+
+    "title": {
+        "text": "Economic inactivity rate (aged 16-64) 2019-2022",
+        "subtitle": "UK seasonally adjusted :%, source:ONS",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"},
+
+    "width":300,
+    "height":300,
+
+    "mark":{
+        "type": "line",
+        "color":"blue",
+        "strokeWidth":2,
+        "opacity":1},
+ 
+
+    "encoding": {
+      "x": {
+          "field": "date",
+          "type": "nominal",
+          "title":null},
+      "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title":"Economic inactivity rate (%)",
+          "scale": {"domain": [18, 24]}
+         
+    }
+}}
