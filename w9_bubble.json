@@ -1,0 +1,62 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "description": "Various US measures state by state",
+  
+    "title": {
+      "text": "Carbon emission intensity and GDP per capita (2019)",
+      "subtitle":["carbon emission intensity is the ratio of CO2 emissions(in kg) to GDP per capita(in dollars) ","Data source: The World Bank"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+    "data": {
+      "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/P_bubblechart.csv",
+      "format":{"type":"csv"}},
+  
+    "mark": {
+      "type":"circle",
+      "size":150,
+      "color":"rgb(0,67,167)",
+      "opacity":0.6},
+    
+    "height": 300,
+    "width": 250,
+  
+    "encoding": {
+      "x": {
+        "field": "GDP per capita (current US$)", 
+        "type": "quantitative",
+        "scale": {"domain": [1000,100000],"type": "symlog"},
+        "title":"GDP per capita (current US$)"},
+  
+      "y": {
+        "field": "CO2 emissions", 
+        "type": "quantitative",
+        "title":"CO2 emissions intensity (kg per 2017 PPP $ of GDP)",
+        "scale": {"domain": [0,0.8]}
+        },
+  
+      "color": {
+        "field": "Country", 
+        "type": "ordinal",
+        "scale": {"scheme": "set1"},
+        "legend":"",
+        "title":null},
+  
+      "size": {
+        "field": "Population", 
+        "type": "quantitative",
+        "title":"Population",
+        "scale": { "range": [5, 300]}},
+     
+     "tooltip":[
+        {"field":"Country", "type": "ordinal", "title":"Country"},
+        {"field":"CO2 emissions", "type": "quantitative", "title":"CO2 emissions","format":".2f"},
+        {"field":"GDP per capita (current US$)", "type": "quantitative", "title":"GDP per capita", "format":".2f"},
+        {"field":"Population", "type": "quantitative", "title":"Population", "format":","}]
+        
+}}
+
+     
