@@ -1,9 +1,7 @@
 { "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
-    "description": "Various US measures state by state",
   
     "title": {
-      "text": "Carbon emission intensity and GDP per capita (2019)",
+      "text": "Carbon emission intensity VS GDP per capita (2019)",
       "subtitle":["carbon emission intensity is the ratio of CO2 emissions(in kg) to GDP per capita(in dollars) ","Data source: The World Bank"],
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
@@ -22,20 +20,23 @@
       "opacity":0.6},
     
     "height": 300,
-    "width": 250,
+    "width": 270,
   
     "encoding": {
       "x": {
         "field": "GDP per capita (current US$)", 
         "type": "quantitative",
-        "scale": {"domain": [1000,100000],"type": "symlog"},
-        "title":"GDP per capita (current US$)"},
+        "scale": {"domain": [500,100000],"type": "log"},
+        "title":"GDP per capita (current US$)",
+        "axis": {"grid": false}
+      },
   
       "y": {
         "field": "CO2 emissions", 
         "type": "quantitative",
         "title":"CO2 emissions intensity (kg per 2017 PPP $ of GDP)",
-        "scale": {"domain": [0,0.8]}
+        "scale": {"domain": [0,0.8]},
+        "axis": {"grid": false}
         },
   
       "color": {
@@ -58,5 +59,3 @@
         {"field":"Population", "type": "quantitative", "title":"Population", "format":","}]
         
 }}
-
-     
