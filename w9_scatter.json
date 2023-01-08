@@ -3,7 +3,7 @@
   "description": "Various US measures state by state",
 
   "title": {
-    "text": "Renewable energy consumption and GDP per capita",
+    "text": "Renewable energy consumption and GDP per capita in 2019",
     "subtitle":[" Renewable energy consumption (% of total final energy consumption)","Data source: The World Bank"],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
