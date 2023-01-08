@@ -1,0 +1,177 @@
+Year,Energy,Value
+2000,Solar PV,3236
+2001,Solar PV,3316
+2002,Solar PV,3236
+2003,Solar PV,3576
+2004,Solar PV,4309
+2005,Solar PV,5086
+2006,Solar PV,6281
+2007,Solar PV,8867
+2008,Solar PV,12836
+2009,Solar PV,19150
+2010,Solar PV,24623
+2011,Solar PV,27247
+2012,Solar PV,26796
+2013,Solar PV,23927
+2014,Solar PV,24718
+2015,Solar PV,26254
+2016,Solar PV,30249
+2017,Solar PV,33945
+2018,Solar PV,36117
+2019,Solar PV,29775
+2020,Solar PV,24184
+2021,Solar PV,1453
+2000,Solar thermal,1952
+2001,Solar thermal,2026
+2002,Solar thermal,2307
+2003,Solar thermal,2217
+2004,Solar thermal,2595
+2005,Solar thermal,2874
+2006,Solar thermal,4063
+2007,Solar thermal,5031
+2008,Solar thermal,7154
+2009,Solar thermal,9470
+2010,Solar thermal,11170
+2011,Solar thermal,11003
+2012,Solar thermal,10790
+2013,Solar thermal,9546
+2014,Solar thermal,8048
+2015,Solar thermal,8159
+2016,Solar thermal,8557
+2017,Solar thermal,8330
+2018,Solar thermal,8116
+2019,Solar thermal,8955
+2020,Solar thermal,8424
+2021,Solar thermal,449
+2000,Solar PV-thermal hybrid,551
+2001,Solar PV-thermal hybrid,597
+2002,Solar PV-thermal hybrid,547
+2003,Solar PV-thermal hybrid,718
+2004,Solar PV-thermal hybrid,622
+2005,Solar PV-thermal hybrid,795
+2006,Solar PV-thermal hybrid,1007
+2007,Solar PV-thermal hybrid,1289
+2008,Solar PV-thermal hybrid,1618
+2009,Solar PV-thermal hybrid,2094
+2010,Solar PV-thermal hybrid,2610
+2011,Solar PV-thermal hybrid,2632
+2012,Solar PV-thermal hybrid,2620
+2013,Solar PV-thermal hybrid,2513
+2014,Solar PV-thermal hybrid,2803
+2015,Solar PV-thermal hybrid,3208
+2016,Solar PV-thermal hybrid,3825
+2017,Solar PV-thermal hybrid,3079
+2018,Solar PV-thermal hybrid,2055
+2019,Solar PV-thermal hybrid,1822
+2020,Solar PV-thermal hybrid,1293
+2021,Solar PV-thermal hybrid,90
+2000,Wind,1782
+2001,Wind,2274
+2002,Wind,2920
+2003,Wind,3050
+2004,Wind,3166
+2005,Wind,3699
+2006,Wind,4141
+2007,Wind,5765
+2008,Wind,7824
+2009,Wind,10773
+2010,Wind,12010
+2011,Wind,12961
+2012,Wind,12852
+2013,Wind,10756
+2014,Wind,10543
+2015,Wind,10088
+2016,Wind,11487
+2017,Wind,13780
+2018,Wind,13579
+2019,Wind,11527
+2020,Wind,9934
+2021,Wind,775
+2000,Hydropower,691
+2001,Hydropower,616
+2002,Hydropower,736
+2003,Hydropower,833
+2004,Hydropower,912
+2005,Hydropower,1042
+2006,Hydropower,1140
+2007,Hydropower,1440
+2008,Hydropower,1978
+2009,Hydropower,2417
+2010,Hydropower,2464
+2011,Hydropower,2853
+2012,Hydropower,2883
+2013,Hydropower,2635
+2014,Hydropower,2674
+2015,Hydropower,2752
+2016,Hydropower,2773
+2017,Hydropower,2985
+2018,Hydropower,2799
+2019,Hydropower,3037
+2020,Hydropower,2274
+2021,Hydropower,206
+2000,Marine and tidal,287
+2001,Marine and tidal,298
+2002,Marine and tidal,312
+2003,Marine and tidal,346
+2004,Marine and tidal,545
+2005,Marine and tidal,646
+2006,Marine and tidal,809
+2007,Marine and tidal,1072
+2008,Marine and tidal,1405
+2009,Marine and tidal,1774
+2010,Marine and tidal,1810
+2011,Marine and tidal,1814
+2012,Marine and tidal,1792
+2013,Marine and tidal,1696
+2014,Marine and tidal,1756
+2015,Marine and tidal,1557
+2016,Marine and tidal,1605
+2017,Marine and tidal,1585
+2018,Marine and tidal,1427
+2019,Marine and tidal,1261
+2020,Marine and tidal,1104
+2021,Marine and tidal,116
+2000,Bioenergy,2285
+2001,Bioenergy,2388
+2002,Bioenergy,2599
+2003,Bioenergy,2719
+2004,Bioenergy,2908
+2005,Bioenergy,3360
+2006,Bioenergy,4686
+2007,Bioenergy,6190
+2008,Bioenergy,7274
+2009,Bioenergy,8119
+2010,Bioenergy,8824
+2011,Bioenergy,9538
+2012,Bioenergy,9630
+2013,Bioenergy,9008
+2014,Bioenergy,9178
+2015,Bioenergy,9270
+2016,Bioenergy,9681
+2017,Bioenergy,8551
+2018,Bioenergy,7243
+2019,Bioenergy,6137
+2020,Bioenergy,3544
+2021,Bioenergy,253
+2000,Geothermal,128
+2001,Geothermal,175
+2002,Geothermal,222
+2003,Geothermal,225
+2004,Geothermal,232
+2005,Geothermal,280
+2006,Geothermal,378
+2007,Geothermal,513
+2008,Geothermal,558
+2009,Geothermal,815
+2010,Geothermal,677
+2011,Geothermal,774
+2012,Geothermal,797
+2013,Geothermal,756
+2014,Geothermal,724
+2015,Geothermal,702
+2016,Geothermal,1041
+2017,Geothermal,1120
+2018,Geothermal,1035
+2019,Geothermal,1248
+2020,Geothermal,927
+2021,Geothermal,25
