@@ -1,9 +1,7 @@
 { "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "description": "Various US measures state by state",
-
   "title": {
-    "text": "Renewable energy consumption and GDP per capita in 2019",
+    "text": "Renewable energy consumption VS GDP per capita in 2019",
     "subtitle":[" Renewable energy consumption (% of total final energy consumption)","Data source: The World Bank"],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
@@ -22,22 +20,24 @@
     "opacity":0.6},
   
   "height": 300,
-  "width": 300,
+  "width": 270,
 
   "encoding": {
 
     "x": {
       "field": "GDP per capita (current US$)", 
       "type": "quantitative",
-      "scale": {"domain": [500, 100000],"type": "symlog"},
-      "title":"GDP per capita (current US$)"
+      "scale": {"domain": [500, 100000],"type": "log"},
+      "title":"GDP per capita (current US$)",
+      "axis": {"grid": false}
+      
       },
 
     "y": {
       "field": "Renewable energy consumption", 
       "type": "quantitative",
-      "title":"Renewable energy consumption (% of total final energy consumption)"
-  
+      "title":"Renewable energy consumption (% of total final energy consumption)",
+      "axis": {"grid": false}
       },
   
    "tooltip":[
