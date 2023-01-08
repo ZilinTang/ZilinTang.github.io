@@ -1,0 +1,78 @@
+﻿Year,Energy,Value
+2010,Biomass,0.07624
+2011,Biomass,0.05583
+2012,Biomass,0.06134
+2013,Biomass,0.08198
+2014,Biomass,0.08279
+2015,Biomass,0.07364
+2016,Biomass,0.07253
+2017,Biomass,0.07304
+2018,Biomass,0.05705
+2019,Biomass,0.06627
+2020,Biomass,0.07623
+2010,Geothermal,0.0492
+2011,Geothermal,
+2012,Geothermal,0.08537
+2013,Geothermal,0.06473
+2014,Geothermal,0.06659
+2015,Geothermal,0.06066
+2016,Geothermal,0.07061
+2017,Geothermal,0.07481
+2018,Geothermal,0.07223
+2019,Geothermal,0.07401
+2020,Geothermal,0.07109
+2010,Hydro,0.03754
+2011,Hydro,0.03533
+2012,Hydro,0.03675
+2013,Hydro,0.04109
+2014,Hydro,0.04141
+2015,Hydro,0.0359
+2016,Hydro,0.04795
+2017,Hydro,0.04896
+2018,Hydro,0.03877
+2019,Hydro,0.04027
+2020,Hydro,0.04444
+2010,Solar Photovoltaic,0.38056
+2011,Solar Photovoltaic,0.28926
+2012,Solar Photovoltaic,0.21746
+2013,Solar Photovoltaic,0.16812
+2014,Solar Photovoltaic,0.15429
+2015,Solar Photovoltaic,0.11731
+2016,Solar Photovoltaic,0.10383
+2017,Solar Photovoltaic,0.08343
+2018,Solar Photovoltaic,0.07043
+2019,Solar Photovoltaic,0.06094
+2020,Solar Photovoltaic,0.05667
+2010,Offshore wind,0.16162
+2011,Offshore wind,0.17089
+2012,Offshore wind,0.14695
+2013,Offshore wind,0.13902
+2014,Offshore wind,0.16534
+2015,Offshore wind,0.14223
+2016,Offshore wind,0.11796
+2017,Offshore wind,0.11355
+2018,Offshore wind,0.11053
+2019,Offshore wind,0.09297
+2020,Offshore wind,0.08378
+2010,Onshore wind,0.08942
+2011,Onshore wind,0.08275
+2012,Onshore wind,0.0817
+2013,Onshore wind,0.07879
+2014,Onshore wind,0.07129
+2015,Onshore wind,0.06334
+2016,Onshore wind,0.05998
+2017,Onshore wind,0.05713
+2018,Onshore wind,0.05055
+2019,Onshore wind,0.04513
+2020,Onshore wind,0.03929
+2010,Concentrating solar power,0.33982
+2011,Concentrating solar power,0.3357
+2012,Concentrating solar power,0.33073
+2013,Concentrating solar power,0.24887
+2014,Concentrating solar power,0.21738
+2015,Concentrating solar power,0.22438
+2016,Concentrating solar power,0.25396
+2017,Concentrating solar power,0.21565
+2018,Concentrating solar power,0.15189
+2019,Concentrating solar power,0.21157
+2020,Concentrating solar power,0.10836
