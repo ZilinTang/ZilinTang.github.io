@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>Document</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+
+<body>
+   
+    <ul>
+        <li><a href= "portfolio.html"id="link">Portfolio</a></li>
+    
+        <li><a href= "project.html" id="link">Project</a></li>
+    
+        <li><a href="index.html"id="link">Home</a></li>
+    </ul>
+<body>
+    
+
+
+  
+   <h1>Potential and performance of renewable energy under the climate change </h1>
+   <h2></h2>
+
+   
+   
+
+   
+
+
+    <div class="myWeek">
+        <h2>Aim</h2>
+
+        <p>Climate change is a formidable environmental concern, which leads to hotter temperatures, natural calamities and biodiversity loss, bringing famine, health risks, poverty and displacement to human-being. 
+            Fossil fuels are the largest contributor to climate change, which accounts for over 90% of CO2 <ul1><a href="https://www.un.org/en/climatechange/raising-ambition/renewable-energy">(The UN, n.d.)</a></ul1>.
+             Therefore, renewable energy, which is sustainable, clean and reliable is the key to the solution. 
+             This project aims to provide an outlook on the potential and performance of renewable energy by using interactive graphs 
+             (try to hover over all the graphs to check the precise information).</p>
+        
+        <div class="chart3" id="Chart23"></div>
+        <P>The map shows the CO2 emissions per capita in the world, darker colors denote greater pollution.
+           Country names in data downloaded from <ul1><a href="https://data.worldbank.org/indicator/EN.ATM.CO2E.PC">The World Bank</a></ul1>. do not match the geojson file. 
+           I manually change the “United States” to “United States of America”, and “Russian Federation “to Russia. </P>
+
+        <div class="chart" id="Chart24"></div>
+        <P>This bubble chart shows three dimensions of data downloaded from <ul1><a href="https://data.worldbank.org/indicator/EN.ATM.CO2E.PC">The World Bank</a></ul1>. in a CSV file. 
+        At first, I use the linear scale, but the bubbles were stacked on the y-axis, which is hard to observe. 
+        Then, I use the log scales which are easy to plot data that vary over multiple orders of magnitude. 
+        The big green bubble shows the world's average level. 
+        Notably, many developed countries are in the lower right area, indicating a high GDP per capita and low carbon intensity.</P>
+
+        <div class="chart" id="Chart25"></div>
+        <p>Data is accessed via The World Bank API, using loops in Python to iterate through the country list and find the name and value for each country
+            <ul1><a href="https://colab.research.google.com/drive/1aTue9k2UoxPzqS2p4Oxk0jAPugFnGYiv#scrollTo=v4tsyYgIMZWC">(Colab Notes)</a></ul1>.
+            I choose 5 developing countries and 5 developed countries to compare their consumption of renewable energy.</p>
+
+            <div class="myWeek">
+                <h2>Potential & Performance</h2>
+
+        <div class="chart" id="Chart26"></div>
+        <p>This graph demonstrates that fossil fuel is dominant in electricity production across time, but the percentage of electricity production by renewable energy increased from 2000.
+             Among different renewable energy, hydropower is the main source. Moreover, wind energy and solar energy are faster growing, which has great potential. 
+             For data, it is from <ul1><a href="https://ourworldindata.org/grapher/share-elec-by-source">Our World in Data</a></ul1> downloaded in a CSV file. The data set is massive across different countries and times, so it is hard to select manually. 
+             I used Python to clean the data, and then download it as a CSV file<a href="https://colab.research.google.com/drive/1CJFI6wqw7Ib77HSPWcdVQF63rcytWNZz">(Colab Notes)</a></ul1>.
+
+        </p>
+
+        <div class="chart" id="Chart27"></div>
+       <p>The key to energy transition is the price of the energy, lower renewable costs make them more competitive compared to fossil energy. 
+        The line chart shows the overall decrease in the cost of renewable energy. 
+         cost of solar energy dramatically decreases from 0.34USD/kWh to 0.11USD/kWh.
+         Moreover, renewable energy technologies follow learning curves, and fossil fuels do not, so renewable energy may be much cheaper than fossil fuels in the future <ul1><a href="https://ourworldindata.org/cheap-renewables-growth">(Roser, 2020)</a></ul1>.
+          Data from <ul1><a href="https://www.irena.org/Data/View-data-by-topic/Costs/Global-Trends">The IRENA</a></ul1> was downloaded by a CSV file.
+
+</p>
+
+        <div class="chart" id="Chart28"></div>
+<p>The driver in the price change in renewable energy is technology (Roser, 2020), the bar chart shows the overall number of patents filed for renewable technologies increased over the past 20 years.
+     the number of patents filed by solar technologies has the largest share, which has great potential. 
+     Data was downloaded from <ul1><a href="https://ourworldindata.org/grapher/patents-filed-for-renewables">Our World in Data</a></ul1> and was cleaned by Python<a href="https://colab.research.google.com/drive/1xpRrmFLO5lPRt6fW7KKnW3QpFbmkUjp7#scrollTo=YygOY6m0T7b9">(Colab Notes)</a></ul1>.
+    </p>
+
+        <div class="chart" id="Chart29"></div>
+<p>The graph shows that investment in renewable energy continuously increases. 
+    solar technology and wind technology have a large share of investment which is consistent with the good performance of cost decline in renewable energy.
+     Data is from the <ul1><a href="https://ourworldindata.org/grapher/investment-in-renewable-energy-by-technology">Our World in Data</a></ul1>.</p>
+
+        <div class="chart" id="Chart30"></div>
+<p><ul1><a href="https://www.irena.org/Data/View-data-by-topic/Benefits/Employment-Time-Series">(The IRENA)</a></ul1> Every dollar of investment in renewable energy generates three times more jobs than in the fossil fuel industry (The UN, 2022).
+     In this graph, a large number of jobs are created by renewable technology. 
+     Solar technology creates a third of the jobs of the total renewable technology, proving its potential again. 
+    It can be argued that renewable brings economic benefits. </p>
+
+    <div class="myWeek">
+        <h2>Challenge</h2>
+
+<p>Most of the data is downloaded as CSV files, and some of the data sets such as the share of electricity production by source and patents filed are massive across countries and time, I use python to read the parts that I need and clean the data. 
+    I access data via API by using loops from different countries which is convenient and precise. 
+    The limitation of my data is for the job created by renewable energy, I can only find the data in 2021, so I cannot show the change of the jobs across time. </p>
+     <div class="myWeek">
+        <h2>Conclusion</h2>   
+    <p>Renewable energy is taking an increasing proportion of the energy structure, and its cost has decreased over the past 10 years which implies that it has a stronger competitive compared to fossil energy. 
+        The increasing number of patents filed by renewable energy shows the progress of technology. 
+        Moreover, the investment also continuously increases. These indicators also have the internal connection. 
+        Among renewable energy, solar energy and wind energy have the most outstanding performance. 
+        Finally, the economic benefit and technological progress can help countries dicarbon and make renewable energy affordable, sustainable and safe.</p>
+
+        <div class="myWeek">
+            <h2>Reference</h2>  
+    <p>
+        UN.( n.d.). Renewable energy – powering a safer future. Available at: https://www.un.org/en/climatechange/raising-ambition/renewable-energy
+        （Access at: 9 January 2023）
+        
+        Roser, M. (2020). Why did renewables become so cheap so fast? Our World in Data. Available at: https://ourworldindata.org/cheap-renewables-growth （Access at: 9 January 2023）
+        
+        </p>
+    </div>    
+
+
+<script>
+
+var myChart23 = "P_chart_carbon map.json";
+var myChart24 = "w9_bubble.json";
+var myChart25 = "P_chart_percent.json"
+var myChart26 = "P_chart_share of electricity by source.json";
+var myChart27 = "P_chart_cost.json";
+var myChart28 = "P_chart_patents.json";
+var myChart29 = "P_chart_investment.json";
+var myChart30 = "P_chart_job.json";
+
+
+
+
+
+vegaEmbed('#Chart23', myChart23);
+vegaEmbed('#Chart24', myChart24);
+vegaEmbed('#Chart25', myChart25);
+vegaEmbed('#Chart26', myChart26);
+vegaEmbed('#Chart27', myChart27);
+vegaEmbed('#Chart28', myChart28);
+vegaEmbed('#Chart29', myChart29);
+vegaEmbed('#Chart30', myChart30);
+
+
+
+</script>
+
+</html>
+
