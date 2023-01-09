@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+     
+       "title": {
+        "text": "Share of electricity production by source, World",
+        "subtitle":" % Source:Our World in Data",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"},
+    
+      "data": {
+      "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/P_data_share%20of%20electricity%20by%20source_New.csv"
+    },
+    
+    "repeat": {"layer": ["Coal", "Gas", "Hydro", "Solar", "Wind", "Oil", "Other renewables excluding bioenergy","Bioenergy"]},
+   
+    "spec": {
+        
+        "height": 300,
+        "width": 260,
+ 
+        "mark": {
+            "type":"line",
+            "strokeWidth":2},    
+  
+        "encoding": {
+            "x": {
+                "field": "Year",
+                "type": "temporal"},
+    
+            "y": {
+                "field": {"repeat": "layer"},
+                "type": "quantitative",
+                "title": "% of electricity production by source"},
+
+            "tooltip": [
+
+      {"field": "Year", "type": "temporal", "title": "Year", "timeUnit": "yearquarter"}],
+    
+            "color": {
+                "datum": {"repeat": "layer"},
+                "scale": {"range": ["black", "yellow", "orange", "blue", "lightblue", "pink", "lightgrey","lightgreen"]}}
+          } 
+      }
+  }

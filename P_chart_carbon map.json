@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 350,
+    "title": {
+      "text": "CO2 emissions (metric tons per capita) in the world (2019)",
+      "subtitle": " Try to hover over the area (data source:The World Bank)",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 12,
+      "anchor": "middle",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/World.geo.json",
+      "format": {"property": "features"}
+    },
+  
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "key": "Country Name",
+          "fields": ["co2 emission"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/P_data_map3.csv"
+          }
+        }
+      }
+    ],
+    "projection": {"type": "mercator"},
+    "mark": {
+      "type": "geoshape",
+      "fXYZill": "lightgrey",
+      "stroke": "darkgray",
+      "strokeWidth": 0.6
+    },
+  
+    "encoding": {
+      "color":{
+        "field":"co2 emission",
+        "type": "quantitative"
+      },
+  
+      "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "Country"},
+        {"field": "co2 emission", "type": "quantitative", "title": "CO2 emission"}
+      ]
+    }
+  }

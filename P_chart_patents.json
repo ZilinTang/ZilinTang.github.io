@@ -1,0 +1,90 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "data": {
+      "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/P_data_patent_New.csv"
+    },
+    
+    "mark": "bar",
+    "width": 300,
+    "height": 300,
+    
+    "title": {
+      "text": "Patents filed for renewable technologies, 2000-2020",
+      "subtitle": "World, Source: Our World in Data)",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+      "transform": [
+      
+      {"filter": {"selection": "EnergySelector"}},
+      
+      {"filter": {
+        "field": "Energy",
+        "oneOf":[
+          "Solar PV",
+          "Solar thermal",
+          "Solar PV-thermal hybrid",
+          "Wind",
+          "Hydropower",
+          "Marine and tidal",
+          "Bioenergy",
+          "Geothermal"
+        ]}
+      }
+    ],
+  
+   "selection": {
+    "EnergySelector": {
+      "type": "single",
+      "fields": ["Energy"],
+      "bind": {
+        "input": "select",
+        "options": [
+           null,
+          "Solar PV",
+          "Solar thermal",
+          "Solar PV-thermal hybrid",
+          "Wind",
+          "Hydropower",
+          "Marine and tidal",
+          "Bioenergy",
+          "Geothermal"
+        ],
+        "name": "Choose sector"
+      }
+    }
+  },
+  
+    
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal", "title": null, "axis": {"grid": false}},
+      "y": {
+        "field": "Value",
+        "title": "Number of patens in renewable energy",
+        "type": "quantitative",
+        "scale": {"domain": [0,100000]},
+        "axis": {"grid": false}
+        
+      },
+      "color": {
+        "field": "Energy",
+        "type": "nominal",
+        "legend": {
+          "orient": "top-right",
+          "columns":2},
+        "scale": {"scheme": "yellowgreenblue"
+        },
+        "title": null
+      },
+      "tooltip": [
+        {"field": "Energy"},
+        {"field": "Year", "type": "temporal", "timeUnit": "year", "title": "Year"},
+        {"field": "Value", "type": "quantitative", "title": "Patents filed"}
+        
+      ]
+    }
+    }

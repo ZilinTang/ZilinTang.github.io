@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+
+    "text": "Renewable Energy Employment by Technology in 2021",
+
+    "subtitle": "(thousand) Date source: IRENA",
+
+    "subtitleFontStyle":"italic",
+
+    "subtitleFontSize":10,
+
+    "anchor": "start",
+
+    "color": "black"
+ },
+
+  "data": {"url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/P_data_job.csv"},
+  "mark":{
+
+ 
+
+      "type": "bar",
+
+      "color": "#86d0bb",
+
+      "strokeWidth":2,
+
+      "opacity":1
+
+ 
+
+    },
+  "height": 300,
+  "width": 300,
+
+  "encoding": {
+    "y": {"field": "Technology", "type": "ordinal", "sort":[], "title": null},
+
+
+
+
+    "x": {"field": "Jobs (thousand)", "type": "quantitative", "title": "Jobs(thousand)", "scale": {"domain": [200, 14000]}},
+
+    "tooltip": [
+
+      {"field": "Jobs (thousand)",  "title": "Jobs (thousand)"},
+
+      {"field": "Technology", "type": "nominal", "title": "Technology"}]
+
+
+    }
+
+
+}

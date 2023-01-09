@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ 
+   "title": {
+       "text": "Global investment in renewable energy by technology",
+       "subtitle":"(billion dollar). Source: Our World in Data",
+       "subtitleFontStyle":"italic",
+       "subtitleFontSize":10,
+       "anchor": "start",
+       "color": "black"
+     },
+   
+     "width": 400, "height": 300,
+     "data": {"url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/P_data_investment_NEW.csv"},
+ 
+ "transform": [
+     {"calculate": "datum.Value/1000000000","as": "billions"}
+   ],
+ 
+     "mark": "area",
+     "encoding": {
+       "x": {
+         "timeUnit": "year", "field": "Year", "title": null,
+         "axis": {"format": "%Y", "grid":  false}
+       },
+       "y": {
+         "aggregate": "sum", "field": "billions", "title": "inverstment in renewable energy (billion dollar)",
+         "axis": {"grid": false}
+       },
+       "color": {
+         "field": "Energy",
+         "title": null,
+         "scale": {"scheme": "yellowgreenblue"},
+         "legend": {"orient": "top-left"},
+         "type": "nominal"
+       },
+   "tooltip": [
+         {"field": "Year", "type": "temporal", "timeUnit": "year", "title": "Year"},
+         {"field": "billions", "type": "quantitative", "title": "investment (billion dollor)"},
+         {"field": "Energy"}
+       ]
+   
+   
+     }
+   }

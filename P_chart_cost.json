@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": " The cost of renewable energy measured by LCOE 2010-2020",
+    "subtitle":["Global weighted-average utility-scale LCOE by technology, USD/kWh, Data Source:IRENA"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data":{"url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/P_data_cost.csv"},
+
+  "height": 300,
+  "width":280,
+
+  "transform":[
+    {"filter": "isValid(datum.Year)"},
+    {"calculate": "datetime(datum.Year, 1)", "as": "Year1"},
+    {"filter": "datum.Year>=minYear"},
+    {"filter": "datum.Year<=maxYear"}
+    ],
+
+  "params": [
+    {
+    "name": "minYear",
+    "value": 2010,
+    "bind": {
+    "input": "range",
+    "min": 2010,
+    "max": 2020,
+        "step": 1,
+      "name": "Start year:"
+        }
+      },
+      {
+        "name": "maxYear",
+        "value": 2020,
+        "bind": {
+          "input": "range",
+          "min": 2010,
+          "max": 2020,
+          "step": 1,
+          "name": "End year:"
+        }
+      }
+    ],
+
+
+  "mark": {"type": "line", "point":false},
+  "encoding": {
+    "x": {
+      "field": "Year1",
+      "type": "temporal",
+      "axis": {"title": null, "grid": false, "ticks": true}
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "USD/kWh",
+      "axis": {"grid": false}
+    },
+
+    "color": {"field": "Energy", "type": "nominal"},
+    
+    "tooltip": [
+      {"field": "Year", "type": "nominal", "title": "Year"},
+
+      {"field": "Energy", "type":"nominal","title": "Energy"},
+
+      {"field": "Value", "type": "quantitative", "title": "LCOE(USD/kWh)"}
+
+    ]
+  }
+}
