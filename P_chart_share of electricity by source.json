@@ -27,12 +27,16 @@
         "encoding": {
             "x": {
                 "field": "Year",
-                "type": "temporal"},
+                "type": "temporal",
+                "axis": {"title": null, "grid": false, "ticks": true}
+            },
     
             "y": {
                 "field": {"repeat": "layer"},
                 "type": "quantitative",
-                "title": "% of electricity production by source"},
+                "title": "% of electricity production by source",
+                "axis": {"grid": false}
+                },
 
             "tooltip": [
 
