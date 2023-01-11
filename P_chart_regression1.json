@@ -1,0 +1,71 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text":[ 
+        "Relationship between renewable energy consumption and carbon Emission"], 
+      "subtitle": ["Renewable energy consumption(% of total final energy consumption)","Carbon Emission (metric tons per capita),    (Data source: The World Bank)"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start"
+     },
+
+    "data": {
+      "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/P_data_regression.csv"
+    },
+    "height": 300,
+    "width": 400,
+    "background": null,
+    "config": {"style": {"cell": {"stroke": "transparent"}
+    }},
+    
+    "layer": [
+      {
+    "mark": {"type": "circle",
+         "color":"skyblue",
+         "size":30},
+
+    "encoding": {
+          "x": {
+            "field": "Share",
+            "type": "quantitative",
+            "title": "Renewable energy consumption(%)",
+            "axis": {"grid": false},
+            "scale": {"zero": false}
+            
+          },
+      "y": {
+            "field": "Emission",
+            "type": "quantitative",
+            "title": "Carbon Emission(metric tons per capita)",
+            "axis": {"grid": false},
+            "scale": {"zero": false}
+             
+          },
+         
+    "tooltip": [
+
+      {"field": "Country", "type": "nominal"},
+      {"field": "Share", "type": "quantitative", "title": "Renewable energy consumption(%)"},
+      {"field": "Emission", "type": "quantitative", "title": "Carbon Emission(metric tons per capita)","format":".2f"}
+            
+          ]
+        }
+      },
+      {
+    "mark": {"type": "line", "color":"darkgrey"},
+        "transform": [{"regression": "Emission", "on": "Share"}],
+        "encoding": {
+          "x": {"field": "Share", "type": "quantitative"},
+          "y": {"field": "Emission", "type": "quantitative"}
+        }
+      },
+      {
+        "transform": [
+          {"regression": "Share", "on": "Emission", "params": true},
+          {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+        ],
+        "mark": {"type": "text", "x": "width", "align": "right", "y": -10},
+        "encoding": {"text": {"type": "nominal", "field": "R2"}}
+      }
+    ]
+  }

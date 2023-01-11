@@ -1,0 +1,62 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 350,
+    "title": {
+      "text": "CO2 eimisson (metric tons per capita)in the world from 2000 to 2019 ",
+      "subtitle": "Try to hover over the map (Data source: The World Bank Data)",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 12,
+      "anchor": "middle",
+      "color": "black"
+      
+    },
+  
+    "params": [
+      {
+        "name": "yearSelector", "value": 2019,
+        "bind": {
+          "input": "range",
+          "min": 2000,
+          "max": 2019,
+          "step": 1,
+          "name": "Select Year"}}],
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/P_data_worldmap3.csv",
+
+      "format": {"type": "csv"}
+    },
+  
+    "transform": [ 
+      {"filter": "datum.Year == yearSelector"}, 
+      {
+        "lookup": "Country Name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/ZilinTang/ZilinTang.github.io/main/World.geo.json",
+            "format": {"property": "features"}
+          },
+          "key": "properties.name",
+          "fields": ["properties", "type", "geometry"]
+          
+        }
+      }
+    ],
+  
+    "projection": {"type": "mercator"},
+
+    "mark": {"type": "geoshape", "stroke": "lightgrey", "strokeWidth": 0.6},
+    "encoding": {
+      "color": {
+        "field": "Emission",
+        "title":"CO2 emission",
+        "type": "quantitative"
+        
+      },
+      "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "Country"},
+        {"field": "Emission", "title": "CO2 emission(metric tons per capita)","format":".2f"}
+      ]
+    }
+  }
